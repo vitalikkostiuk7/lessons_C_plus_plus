@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    color: #333;
+}
+
+.theme-list {
+    list-style: none;
+    padding: 0;
+}
+
+.theme-list-el {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.theme-title {
+    color: #3498db;
+}
+
+.theme-para {
+    color: #555;
+}
+
+.data-types-list {
+    margin-left: 20px;
+    padding: 0;
+}
+
+.data-types-el {
+    color: #27ae60;
+}
+
+code {
+    overflow-x: auto; /* Add horizontal scrolling for code blocks */
+    background-color: #f9f9f9;
+    padding: 5px;
+    display: block;
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.theme-link {
+    color: #e74c3c;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.theme-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    .theme-list-el {
+        padding: 8px;
+    }
+
+    .data-types-list {
+        margin-left: 10px;
+    }
+
+    code {
+        padding: 3px;
+    }
+}
