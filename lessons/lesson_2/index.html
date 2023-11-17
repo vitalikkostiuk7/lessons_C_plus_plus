@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Урок 2</title>
+</head>
+<body>
+    <main>
+        <h1 class="main-title">Урок 2</h1>
+        <ul class="theme-list">
+            <li class="theme-list-el">
+                <h2 class="theme-title">Функції</h2>
+                <p class="theme-para">Функція — це послідовність стейтментів для виконання певного завдання. Часто ваші програми переривають виконання одних функцій заради виконання інших. Ви це постійно робите в реальному житті, наприклад, ви читаєте книгу і згадали, що повинні були зробити телефонний дзвінок. Ви залишаєте закладку в своїй книзі, берете телефон і набираєте номер. Після того, як ви вже поговорили, ви повертаєтеся до тієї сторінки в книзі, на якій ви зупинилися. </p>
+                <p class="theme-para">Іншими словами це шаблон, який ми можемо використовувати багато разів.</p>
+                <p class="theme-para"> Функції, які ми пишемо, можуть повертати значення. Для цього потрібно вказати тип повернення значення. Він вказується при оголошенні функції, перед її ім’ям.</p>  
+                <p class="theme-para">Після цього всередині функції, що викликається, ми використовуємо оператор return, щоб вказати фактичне значення, що повертається.</p>
+                <p class="theme-para">Приклад коду</p>
+                <code>
+                    <pre>
+<span class="green">// це оголошення функції   </span>                     
+int multiply(int a, int b) { // це функція, яка приймає 2 цілочисельні змінні (параметри) a, b
+    return a * b; <span class="green">// і повертає цілочисельне(int) значення, в нашому випадку це добуток параметрів</span>
+}
+
+int main(){
+    int first_number = 3;
+    int second_number = 5;
+    
+    <span class="green">// тут ми викликаємо функцію, написавши її назву, і в дужках вказавши параметри, які вона приймає</span>
+    int mult = multiply(first_number, second_number); <span class="green">// значення, якее поверне ця функція одразу запишеться в змінну mult</span>
+
+    cout << mult; <span class="green">// в результаті буде виведено 15</span>
+
+    return 0;
+}
+                    </pre>
+                </code>
+                <p class="theme-para">Одну і ту ж функцію можна викликати декілька разів, навіть в різних програмах, що дуже корисно:</p>
+                <code>
+                    <pre>
+int add(int a, int b) { <span class="green">// функція яка повертає суму параметрів</span>
+    return a + b;
+}
+
+int main(){
+
+    int a = 2;
+    int b = 5;
+
+    int c = add(a, b); <span class="green">// в змінну с буде записано суму значень a та b</span>
+    int d = add(a, c); <span class="green">// ми повторно використовуємо функцію add для знаходження суми змінних а та с</span>
+
+    return 0;
+}
+                    </pre>
+                </code>
+                <a target="_blank" href="https://acode.com.ua/urok-15-funktsiyi-i-operator-return/" class="theme-link">Більше про функції тут</a>
+            </li>
+            <li class="theme-list-el">
+                <h2 class="theme-title">Масиви</h2>
+                <p class="theme-para">Масиви в C++ є структурним типом даних, який дозволяє зберігати однотипні елементи в лінійному порядку. Елементи масиву можна звертатися до них за допомогою індексів.</p>
+                <p class="theme-para">Приклад коду</p>
+                <code>
+                    <pre>
+int array[5] = { 1, 5, 3, 7, 4 }; <span class="green">// ініціалізовуємо масив розміром 5 і записуємо в нього дані</span>
+                    </pre>
+                </code>
+                <p class="theme-para">За замовчуванням, якщо в оголошеному масиві ініціюється тільки декілька перших елементів, то його інші елементи ініціюються нулями. Так, у випадку, коли float mas[10]= {2.2,34.56};, останні вісім елементів масиву одержать значення 0.</p>
+                <p class="theme-para">C++ підтримує ще один тип масивів — динамічні масиви. Розмір такого масиву може бути встановлений під час виконання програми і його можна змінити.</p>
+                <code>
+                    <pre>
+int length;
+cin >> length; <span class="green">//довжинамасиву обов'язково має бути додатнім числом </span>
+double *array = new double[length]; <span class="green">// використовуємо оператор new[] для виділення масиву</span>
+                    </pre>
+                </code>
+                <a target="_blank" href="https://acode.com.ua/urok-77-masyvy/" class="theme-link">Більше про масиви тут</a>
+                <a target="_blank" href="https://acode.com.ua/urok-90-dynamichni-masyvy/" class="theme-link">Більше про динамічні масиви тут</a>
+            </li>
+        </ul>
+    </main>
+    <button onclick="window.location.href = '../../'" class="btn-go-to-main">Повернутись на головну сторінку</button>
+</body>
+</html>
