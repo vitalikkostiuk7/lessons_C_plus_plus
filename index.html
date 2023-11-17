@@ -3,134 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Урок 1</title>
+    <link rel="stylesheet" href="./index.css">
+    <title>Головна сторінка</title>
 </head>
 <body>
-    <main>
-        <h1 class="main-title">Урок 1</h1>
-        <ul class="theme-list">
-            <li class="theme-list-el">
-                <h2 class="theme-title">Типи даних</h2>
-                <p class="theme-para">Основні типи даних часто називають арифметичними, тому що їх можна використовувати в арифметичних операціях. Для опису основних типів мови C++ використовують такі службові слова:</p>
-                <ul class="data-types-list">
-                    <li class="data-types-el">int (цілий);</li>
-                    <li class="data-types-el">char (символьний);</li>
-                    <li class="data-types-el">bool (логічний);</li>
-                    <li class="data-types-el">float (дійсний);</li>
-                    <li class="data-types-el">double (дійсний з подвійною точністю);</li>
-                </ul>
-                <p class="theme-para">Приклад коду</p>
-                <code>
-                    <pre>
-int a = 5; // зберігає ціле число
-char b = 'c'; // зберігає символ
-bool c = true; // зберігає або true або false (часто використовується для порівнянь)
-float d = 1.3; // зберігає дробове число (число з плаваючою комою)
-double e = 5.1; // таке ж як і float тільки більша точність
-                    </pre>
-                </code>
-                <a target="_blank" href="http://cpp.dp.ua/typy-danyh/" class="theme-link">Більше про типи даних тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Унарні арифметичні оператори</h2>
-                <p class="theme-para">Унарні оператори — це ті, які застосовуються тільки до одного операнду. Існують два унарних арифметичних оператори: плюс (+) і мінус (-).</p>
-                <img src="./images/unarni.jpg" alt="">
-                <p class="theme-para">Приклад коду</p>
-                <code>
-                    <pre>
-int a = -5; // значення а рівне мінус п'яти(-5)
-double b = +3.9; // значення b - три цілих і дев'ть десятих(3.9)
-                    </pre>
-                </code>
-                <p class="theme-para">Обидва цих оператори потрібно розміщувати безпосередньо перед самим операндом, без пробілу (−x, а не − x). <br><br>Не слід плутати унарний оператор мінус з бінарним оператором віднімання, хоч вони і використовують один і той же символ. Наприклад, у виразі х = 5 − −3;, перший мінус — це оператор віднімання, а другий — унарний мінус.</p>
-                <a target="_blank" href="https://acode.com.ua/urok-42-aryfmetychni-operatory/#toc-0" class="theme-link">Більше  унарні оператори тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Бінарні оператори</h2>
-                <p class="theme-para">Бінарні оператори — це оператори, які застосовуються до двох операндів (зліва і справа). Існує 5 бінарних операторів.</p>
-                <img src="./images/binarni.jpg" alt="">
-                <p class="theme-para">Оператор ділення з остачею (%) працює тільки з цілочисельними операндами і повертає залишок після цілочисельного ділення. Даний оператор найчастіше використовують для перевірки ділення без остачі одних чисел на інші. Якщо х % у == 0, то х ділиться на у без остачі.</p>
-                <p class="theme-para">Приклад коду</p>
-                <code>
-                    <pre>
-int a = 3;
-int b = 3 % 2; // в b буде записано 1 (остача від ділення 3 на 2 рівна 1)
-                    </pre>
-                </code>
-                <a target="_blank" href="https://acode.com.ua/urok-42-aryfmetychni-operatory/#toc-1" class="theme-link">Більше про бінарні оператори тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Тернарний арифметичний оператор</h2>
-                <p class="theme-para">Умовний (тернарний) оператор ( ? : ) — це єдиний тернарний оператор в мові С++, який працює з трьома операндами. Через це його часто називають просто “тернарний оператор“.</p>
-                <img src="./images/ternarniy.jpg" alt="">
-                <p class="theme-para">
-                    <code>
-                        <pre>Оператор ?: є скороченим способом (альтернативою) розгалуження if/else.
-Стейтменти if/else:
-    if (умова)
-       вираз;
-    else
-       інший_вираз;
-можно записати як
-(умова) ? вираз : інший_вираз;
-Зверніть увагу, операндами умовного оператора повинні бути вирази (а не стейтменти).</p>
-                    </pre>
-                </code>
-                <p class="theme-para">Приклад коду</p>
-                <code>
-                    <pre>
-(a < b) ? a += 10 : b++; // тернарний оператор
-if (a < b) { // еквівалентний код без тернарного оператора
-    a += 10;
-}
-else {
-    b++;
-}
-cout << a << endl << b;
-                    </pre>
-                </code>
-                <a target="_blank" href="https://acode.com.ua/urok-44-umovnyj-ternarnyj-operator-sizeof-i-koma/#toc-2" class="theme-link">Більше про тернарний оператор тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Арифметичні оператори присвоювання</h2>
-                <img src="./images/prisvoiennya.jpg" alt="">
-                <p class="theme-para"></p>
-                <p class="theme-para"></p>
-                <code>
-                    <pre>
-int a = 10;
-
-a = a + 5; // значення а збільшиться на 5
-a += 5; // еквівалентне збільшення значення змінної а на 5
-// так само працює і для -=, *=, /=, %=
-                    </pre>
-                </code>
-                <a target="_blank" href="https://acode.com.ua/urok-42-aryfmetychni-operatory/#toc-6" class="theme-link">Більше про оператори присвоювання тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Інкремент та декремент</h2>
-                <img src="" alt="">
-                <p class="theme-para">Операції інкременту (збільшення на 1) і декременту (зменшення на 1) змінних настільки поширені, що у них є свої власні оператори в мові C++. Крім того, кожен з цих операторів має дві версії застосування: префікс і постфікс.</p>
-                <img src="./images/increment_decrement.jpg" alt="">
-                <p class="theme-para">Приклад коду</p>
-                <code>
-                    <pre>
-int a = 0;
-
-++a; // префіксний інкремент (збільшує значення змінної а на 1)
-a--; // постфіксний декремент (зменшує значення змінної а на 1)
-                    </pre>
-                </code>
-                <a target="_blank" href="https://acode.com.ua/urok-43-inkrement-dekrement-i-pobichni-efekty/" class="theme-link">Більше про інкремент та декремент тут</a>
-            </li>
-            <li class="theme-list-el">
-                <h2 class="theme-title">Оператори порівняння</h2>
-                <p class="theme-para">У мові C++ є 6 операторів порівняння:</p>
-                <img src="./images/porivniannia.jpg" alt="">
-                <a target="_blank" href="https://acode.com.ua/urok-45-operatory-porivnyannya/" class="theme-link">Більше про оператори порівняння тут</a>
-            </li>
-        </ul>
-    </main>
+    <ul class="lessons-list">
+        <li class="lessons-el">
+            <button onclick="window.location.href = './lessons/lesson_1/'" class="btn-lesson">Урок 1</button>
+        </li>
+        <li class="lessons-el">
+            <button onclick="window.location.href = './lessons/lesson_2/'" class="btn-lesson">Урок 2</button>
+        </li>
+    </ul>
 </body>
 </html>
