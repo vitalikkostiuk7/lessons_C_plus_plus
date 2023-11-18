@@ -71,6 +71,61 @@ img {
     text-decoration: underline;
 }
 
+.btn-go-to-main {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-go-to-main:hover {
+    background-color: #2980b9;
+}
+
+.green{
+    color: green;
+}
+
+.task-btn,
+.answer-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.task-btn:hover,
+.answer-btn:hover{
+    background-color: #2980b9;
+}
+
+.hints {
+    margin-left: 30px;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 600px) {
     main {
@@ -88,24 +143,4 @@ img {
     code {
         padding: 3px;
     }
-}
-
-.btn-go-to-main {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-go-to-main:hover {
-    background-color: #2980b9;
-}
-
-.green{
-    color: green;
 }
